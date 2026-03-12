@@ -1,0 +1,51 @@
+---
+description: Formatting rules for seminar Markdown files (Pandoc → PDF)
+globs: Seminars/**/*.md
+alwaysApply: false
+---
+
+# Seminar Markdown Formatting (Pandoc + XeLaTeX)
+
+When editing files in `Seminars/`, follow these rules so `build-pdf.ps1` produces correct PDFs.
+
+## Math
+
+- **Inline math:** `$...$` (single dollar, no space after opening or before closing).
+- **Display math:** `$$...$$` on its own line(s). Put a **blank line before** the opening `$$` when it follows a paragraph (so Pandoc parses it as display, not inline).
+- **Inside math:** Use standard LaTeX: `\frac{a}{b}`, `\sum_{n=1}^{\infty}`, `\rightarrow`, `\mathbb{R}`, etc. One backslash for commands.
+- Avoid `$` in plain text (escape as `\$` if needed). Do not put a digit immediately after closing `$` (e.g. `$1$0` can mis-parse).
+
+## Structure
+
+- **Headings:** `#` for seminar title, `###` for theorems/sections. Use ATX-style (`#`, `##`, `###`).
+- **Horizontal rules:** `---` to separate big sections.
+- **Lists:** Use `-` or `1.` with a single space after; indent continuation lines with 4 spaces if needed.
+- **Blockquotes:** `>` for remarks/theorems that should be quoted.
+
+## Don’t
+
+- Do **not** add boilerplate like “Вот транскрипция рукописного текста…”.
+- Do **not** put display math (`$$`) immediately after text on the same paragraph (add a blank line before `$$`).
+- Do **not** use triple asterisks `***` as section breaks; use `---` for horizontal rules.
+- Do **not** use raw HTML in tables; use `<br>` only if necessary for line breaks in table cells.
+
+## File naming
+
+- Files: `Sem1.md`, `Sem2.md`, … so that `build-pdf.ps1` sorts them by number (`Sem1`, `Sem2`, …).
+
+## Tables (if used)
+
+- Use Pandoc pipe tables. Alignment with `:---`, `:---:`, `---:`.
+- Math in cells: `$...$` works inside table cells.
+
+## Example
+
+```markdown
+### Th. (необх. усл. сх-ти ряда)
+
+Ряд $\sum_{n=1}^{\infty} a_n$ сх. $\Rightarrow a_n \rightarrow 0$.
+
+$$ \lim_{n \to \infty} \frac{a_{n+1}}{a_n} = \frac{1}{3} < 1 $$
+
+*(пояснение)*
+```
