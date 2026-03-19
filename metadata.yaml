@@ -1,20 +1,33 @@
 title: "Математический анализ"
 subtitle: "Конспекты семинаров, 4-й семестр"
 documentclass: article
-fontsize: 11pt
-linestretch: 1.25
+fontsize: 12pt
+linestretch: 1.3
 geometry:
-  - margin=2.5cm
   - a4paper
+  - margin=2.5cm
 numbersections: true
 toc: true
 toc-title: "Содержание"
 toc-depth: 2
-pagestyle: headings
+pagestyle: fancy
 colorlinks: true
 linkcolor: blue
 urlcolor: blue
 header-includes:
   - \usepackage{indentfirst}
+  - \usepackage{microtype}
+  - \usepackage{titlesec}
+  - \usepackage{fancyhdr}
+  - \titleformat{\section}[block]{\Large\bfseries}{\thesection.}{0.75em}{}
+  - \titlespacing*{\section}{0pt}{3ex plus 1ex minus 0.2ex}{1.5ex plus 0.2ex}
+  - \titleformat{\subsection}[block]{\large\bfseries}{\thesubsection.}{0.75em}{}
+  - \titlespacing*{\subsection}{0pt}{2.5ex plus 1ex minus 0.2ex}{1.2ex plus 0.2ex}
+  - \pagestyle{fancy}
+  - \fancyhf{}
+  - \fancyhead[LE,RO]{\thepage}
+  - \fancyhead[LO]{\nouppercase{\rightmark}}
+  - \fancyhead[RE]{\nouppercase{\leftmark}}
+  - \renewcommand{\headrulewidth}{0.4pt}
   - \let\oldsection\section
   - \renewcommand{\section}{\clearpage\oldsection}

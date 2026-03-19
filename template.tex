@@ -27,6 +27,49 @@ $endif$
 $if(cancel)$
 \usepackage{cancel}
 $endif$
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+
+% Page style: elegant running headers and clean footer
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[LO]{\nouppercase{\rightmark}}
+\fancyhead[RE]{\nouppercase{\leftmark}}
+\setlength{\headheight}{14pt}
+
+% Color palette for headings
+\definecolor{MatAnBlue}{HTML}{1A4D8F}
+\definecolor{MatAnGray}{gray}{0.25}
+
+% Chapter and section styling for a "book" feel
+\titleformat{\chapter}[display]
+  {\normalfont\bfseries\Huge\color{MatAnBlue}}
+  {\filright\Huge\thechapter}
+  {1ex}
+  {\titlerule[1pt]\vspace{1ex}\filright}
+  [\vspace{1ex}\titlerule]
+
+\titlespacing*{\chapter}{0pt}{-10pt}{30pt}
+
+\titleformat{\section}
+  {\normalfont\bfseries\Large\color{MatAnBlue}}
+  {\thesection}{0.75em}{}
+
+\titleformat{\subsection}
+  {\normalfont\bfseries\large\color{MatAnGray}}
+  {\thesubsection}{0.75em}{}
+
+% Compact but readable lists
+\setlist[itemize]{topsep=4pt,itemsep=2pt}
+\setlist[enumerate]{topsep=4pt,itemsep=2pt}
+
+% Slightly increased line spread for better readability
+\linespread{1.1}
 $--
 $-- section numbering
 $--
