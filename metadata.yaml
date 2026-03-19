@@ -1,0 +1,20 @@
+title: "Математический анализ"
+subtitle: "Конспекты семинаров, 4-й семестр"
+documentclass: article
+fontsize: 11pt
+linestretch: 1.25
+geometry:
+  - margin=2.5cm
+  - a4paper
+numbersections: true
+toc: true
+toc-title: "Содержание"
+toc-depth: 2
+pagestyle: headings
+colorlinks: true
+linkcolor: blue
+urlcolor: blue
+header-includes:
+  - \usepackage{indentfirst}
+  - \let\oldsection\section
+  - \renewcommand{\section}{\clearpage\oldsection}

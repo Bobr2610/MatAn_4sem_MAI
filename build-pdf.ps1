@@ -15,12 +15,12 @@ Write-Host "Found $($files.Count) files to process" -ForegroundColor Gray
 Write-Host "Creating Seminars.pdf..." -ForegroundColor Cyan
 pandoc $files `
     -o Seminars.pdf `
+    --metadata-file=metadata.yaml `
+    --template=template.tex `
     --pdf-engine=xelatex `
-    -V geometry:margin=0.5cm `
     -V mainfont="Cambria" `
     -V mathfont="Cambria Math" `
     -V monofont="Consolas" `
-    -V pagestyle=empty `
     --from markdown+tex_math_single_backslash+tex_math_dollars-yaml_metadata_block
 
 if ($LASTEXITCODE -eq 0) {

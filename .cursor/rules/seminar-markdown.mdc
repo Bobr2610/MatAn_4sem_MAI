@@ -17,7 +17,7 @@ When editing files in `Seminars/`, follow these rules so `build-pdf.ps1` produce
 
 ## Structure
 
-- **Headings:** `#` for seminar title, `###` for theorems/sections. Use ATX-style (`#`, `##`, `###`).
+- **Headings:** `#` for seminar title only (one per file). `##` for main topics within seminar. `###` for theorems/examples. Use ATX-style (`#`, `##`, `###`).
 - **Horizontal rules:** `---` to separate big sections.
 - **Lists:** Use `-` or `1.` with a single space after; indent continuation lines with 4 spaces if needed.
 - **Blockquotes:** `>` for remarks/theorems that should be quoted.
