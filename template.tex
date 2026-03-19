@@ -34,7 +34,7 @@ $endif$
 \usepackage{titlesec}
 \usepackage{fancyhdr}
 
-% Page style: elegant running headers and clean footer
+% Page style: elegant running headers and clean footer (monochrome)
 \pagestyle{fancy}
 \fancyhf{}
 \fancyhead[LE,RO]{\thepage}
@@ -42,26 +42,12 @@ $endif$
 \fancyhead[RE]{\nouppercase{\leftmark}}
 \setlength{\headheight}{14pt}
 
-% Color palette for headings
-\definecolor{MatAnBlue}{HTML}{1A4D8F}
-\definecolor{MatAnGray}{gray}{0.25}
-
-% Chapter and section styling for a "book" feel
-\titleformat{\chapter}[display]
-  {\normalfont\bfseries\Huge\color{MatAnBlue}}
-  {\filright\Huge\thechapter}
-  {1ex}
-  {\titlerule[1pt]\vspace{1ex}\filright}
-  [\vspace{1ex}\titlerule]
-
-\titlespacing*{\chapter}{0pt}{-10pt}{30pt}
-
 \titleformat{\section}
-  {\normalfont\bfseries\Large\color{MatAnBlue}}
+  {\normalfont\bfseries\Large}
   {\thesection}{0.75em}{}
 
 \titleformat{\subsection}
-  {\normalfont\bfseries\large\color{MatAnGray}}
+  {\normalfont\bfseries\large}
   {\thesubsection}{0.75em}{}
 
 % Compact but readable lists
@@ -144,7 +130,7 @@ $endif$
 $endif$
 \setcounter{tocdepth}{$toc-depth$}
 \tableofcontents
-\newpage
+\vspace{-1.25\baselineskip}
 }
 $endif$
 $if(lof)$
@@ -157,6 +143,13 @@ $if(linestretch)$
 \setstretch{$linestretch$}
 $endif$
 $if(has-frontmatter)$
+% Avoid blank page: book's \mainmatter uses \cleardoublepage and the first
+% \chapter also \clearpage — that inserts an extra empty sheet after the TOC.
+\makeatletter
+\renewcommand{\mainmatter}{%
+  \@mainmattertrue
+  \pagenumbering{arabic}}%
+\makeatother
 \mainmatter
 $endif$
 $body$
