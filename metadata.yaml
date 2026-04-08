@@ -28,10 +28,8 @@ header-includes:
     - \titlespacing*{\subsection}{0pt}{2.5ex plus 1ex minus 0.2ex}{1.2ex plus 0.2ex}
     - \pagestyle{fancy}
     - \fancyhf{}
-    - \fancyhead[LE,RO]{\thepage}
-    - \fancyhead[LO]{\nouppercase{\rightmark}}
-    - \fancyhead[RE]{\nouppercase{\leftmark}}
-    - \renewcommand{\headrulewidth}{0.4pt}
+    - \cfoot{\thepage}
+    - \renewcommand{\headrulewidth}{0pt}
     - \renewcommand{\chaptername}{}
     - \renewcommand{\chaptertitlename}{}
     - \titleformat{\chapter}[block]{\normalfont\huge\bfseries\raggedright}{\thechapter.}{0.5em}{}
