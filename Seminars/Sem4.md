@@ -2,13 +2,13 @@
 
 # 4-ый МАТ. Семинар 12.03.2026
 
-Разбор Д/З
+Разбор Домашнего задания
 
-**!** №9 $\sum_{n=1}^{\infty} \frac{\sin n}{n}$ — **!** $[ \cos 2 + \cos 7 + \cos 12 + \dots ]$ $\leftarrow$ *Может быть на КР*
+**!** №9 $\sum_{n=1}^{\infty} \frac{\sin n}{n}$ — **!** $[ \cos 2 + \cos 7 + \cos 12 + \dots ]$ $\leftarrow$ *Может быть на контрольной работе*
 
 $\frac{(\cos 2 + \dots) \cos \frac{5}{2}}{\cos \frac{5}{2}}$
 
-**пр-к Дирихле**
+**признак Дирихле**
 
 1) $a_n = \frac{1}{n}, \quad b_n = \sin n$
 
@@ -16,17 +16,17 @@ $\frac{(\cos 2 + \dots) \cos \frac{5}{2}}{\cos \frac{5}{2}}$
 
 3) $a_n = \frac{1}{n} \to 0$
 
-4) $\forall N \quad |\sin 1 + \dots + \sin N| \le C \text{ — для нек. конкр. конст-ты}$
+4) $\forall N \quad |\sin 1 + \dots + \sin N| \le C \text{ — для некоторой конкретной константы}$
 
-*! НЕЛЬЗЯ $1 \cdot N$ т.к. в модуле $\le 1 \to N$ макс сумма*
+*! НЕЛЬЗЯ $1 \cdot N$ т.к. в модуле $\le 1 \to N$ максимальная сумма*
 
-**Искусств. прием:**
+**Искусственный прием:**
 
 Пусть $\alpha \ne 2\pi k$ ($k \in \mathbb{Z}$) $\quad \text{т.к. } \alpha \ne 2\pi \to \frac{\alpha}{2} \ne \pi k$
 
 $\downarrow \to \sin \frac{\alpha}{2} \ne 0$
 
-Рассм. $\underbrace{\sin \alpha \quad +}_{+\alpha} \underbrace{\sin 2\alpha \quad +}_{+\alpha} \underbrace{\sin 3\alpha \quad + \dots +}_{+\alpha} \sin(N\alpha) =$
+Рассмотрим $\underbrace{\sin \alpha \quad +}_{+\alpha} \underbrace{\sin 2\alpha \quad +}_{+\alpha} \underbrace{\sin 3\alpha \quad + \dots +}_{+\alpha} \sin(N\alpha) =$
 
 $\uparrow$ *Домножим и разделим на $\sin$ от $\frac{\alpha}{2}$*
 
@@ -50,7 +50,7 @@ $\Rightarrow |\sin 1 + \dots + \sin N| \le \frac{1}{\sin \frac{1}{2}}$
 
 [Обычный] признак сравнения
 
-**Th.** (признак сравнения)
+**Теорема** (признак сравнения)
 
 Пусть 1) даны два ряда $\sum a_n$ и $\sum b_n$
 
@@ -64,58 +64,58 @@ $\hookrightarrow$ говорят, что "$\sum b_n$ — мажорирует р
 
 "$\sum a_n$ — мажорируемый рядом $\sum b_n$"
 
-Тогда 1) If $\sum b_n$ — сход., то $\sum a_n$ — сход.
+Тогда 1) Если $\sum b_n$ — сходится, то $\sum a_n$ — сходится.
 
-2) — расх., — расх.
+2) — расходится, — расходится.
 
-**Пр.** Иссл-ть на сх-ть: $\sum_{n=1}^\infty \frac{\arctan(n!)}{n^3}$
+**Пример:** Исследовать на сходимость: $\sum_{n=1}^\infty \frac{\arctan(n!)}{n^3}$
 
-Решение: $0 \le a_n = \frac{\arctan(n!)}{n^3} \le \frac{(\pi/2)}{n^3} = b_n \quad \{ \arctan \text{ — не зав. от внутр.} \}$
+Решение: $0 \le a_n = \frac{\arctan(n!)}{n^3} \le \frac{(\pi/2)}{n^3} = b_n \quad \{ \arctan \text{ — не зависит от внутреннего} \}$
 
-Получили мажорирующий ряд $\sum_{n=1}^\infty \frac{\pi/2}{n^3}$, а он сх-ся
+Получили мажорирующий ряд $\sum_{n=1}^\infty \frac{\pi/2}{n^3}$, а он сходится
 
-$\Rightarrow$ По пр-ку ср-ия ряд $\sum a_n$ сх-ся.
+$\Rightarrow$ По признаку сравнения ряд $\sum a_n$ сходится.
 
-**Пр.** —//— : $\sum_{n=1}^\infty \frac{\cos \frac{1}{n}}{n}$
+**Пример:** —//— : $\sum_{n=1}^\infty \frac{\cos \frac{1}{n}}{n}$
 
-$0 \le a_n = \frac{\cos \frac{1}{n}}{n} \le \dots \frac{1}{n}$ — *НЕЛЬЗЯ Т.К. ГАРМ. РАСХ-СЯ*
+$0 \le a_n = \frac{\cos \frac{1}{n}}{n} \le \dots \frac{1}{n}$ — *НЕЛЬЗЯ Т.К. ГАРМОНИЧЕСКИЙ РАСХОДИТСЯ*
 
-$b_n = \frac{\cos \frac{1}{n}}{n} \ge \frac{\cos 1}{n} \Rightarrow \cos 1 \cdot \sum_{n=1}^\infty \frac{1}{n} \Rightarrow$ гарм. ряд $\Rightarrow$ расх-ся
+$b_n = \frac{\cos \frac{1}{n}}{n} \ge \frac{\cos 1}{n} \Rightarrow \cos 1 \cdot \sum_{n=1}^\infty \frac{1}{n} \Rightarrow$ гармонический ряд $\Rightarrow$ расходится
 
 $\uparrow$ $a_n$
 
-$\Rightarrow$ По пр-ку ср-ия ряд $\sum b_n$ расх-ся
+$\Rightarrow$ По признаку сравнения ряд $\sum b_n$ расходится
 
 ---
 
 ### Абсолютная и Условная сходимости
 
-**ФАКТ:** $\sum |a_n|$ — сх-ся $\Rightarrow \sum a_n$ — сх-ся
+**ФАКТ:** $\sum |a_n|$ — сходится $\Rightarrow \sum a_n$ — сходится
 
 $\uparrow$ *ряд из модулей членов*
 
 Примечание. Обратное неверно, т.е. $\not\Rightarrow$
 
-Напр., $(1 - \frac{1}{2} + \frac{1}{3} + \dots)$, однако $(1 + \frac{1}{2} + \frac{1}{3} + \dots)$
+Например, $(1 - \frac{1}{2} + \frac{1}{3} + \dots)$, однако $(1 + \frac{1}{2} + \frac{1}{3} + \dots)$
 
-сх-ся \quad \quad расх.
+сходится \quad \quad расходится
 
-**Опр.** If $\sum |a_n|$ сх-ся, то ряд $\sum a_n$ **Абсолютно** сх-ся $\left[ \sum \frac{1}{n^2} \right]$
+**Определение.** Если $\sum |a_n|$ сходится, то ряд $\sum a_n$ **абсолютно** сходится $\left[ \sum \frac{1}{n^2} \right]$
 
-**Опр.** If $\sum |a_n|$ расх-ся, то сам ряд $\sum a_n$ сх-ся,
+**Определение.** Если $\sum |a_n|$ расходится, то сам ряд $\sum a_n$ сходится,
 
-то ряд $\sum a_n$ — **Условно** сх-ся $\left[ 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \dots \right]$
+то ряд $\sum a_n$ — **условно** сходится $\left[ 1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \dots \right]$
 
-Упр:
+Упражнения:
 
 ① $1 - \frac{1}{\sqrt{2}} + \frac{1}{\sqrt{3}} - \frac{1}{\sqrt{4}} + \dots$
 
-Сх-ся по Лейбницу $\Rightarrow$ сх-ся усл.
+Сходится по Лейбницу $\Rightarrow$ сходится условно
 
-Но по $||$ расх
+Но по модулям расходится
 
 ② $\frac{1}{2} + \frac{2}{4} - \frac{3}{8} - \frac{4}{16} + \frac{5}{32} + \frac{6}{64} + \dots$
 
-ряд из $||$ сх-ся $\Rightarrow$ абсолютно сх-ся
+ряд из модулей сходится $\Rightarrow$ абсолютно сходится
 
-$\sum \frac{n}{2^n}$ $\leftarrow$ сх-ся по рад. Коши
+$\sum \frac{n}{2^n}$ $\leftarrow$ сходится по радикальному признаку Коши
