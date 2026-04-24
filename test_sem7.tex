@@ -1,0 +1,270 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+\PassOptionsToPackage{dvipsnames,svgnames,x11names}{xcolor}
+\documentclass[
+  12pt,
+  oneside,
+  openany]{book}
+\usepackage{xcolor}
+\usepackage[a4paper,margin=2.5cm]{geometry}
+\usepackage{amsmath,amssymb}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+
+% Page style: elegant running headers and clean footer (monochrome)
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE,RO]{\thepage}
+\fancyhead[LO]{\nouppercase{\rightmark}}
+\fancyhead[RE]{\nouppercase{\leftmark}}
+\setlength{\headheight}{14pt}
+
+\titleformat{\section}
+  {\normalfont\bfseries\Large}
+  {\thesection}{0.75em}{}
+
+\titleformat{\subsection}
+  {\normalfont\bfseries\large}
+  {\thesubsection}{0.75em}{}
+
+% Compact but readable lists
+\setlist[itemize]{topsep=4pt,itemsep=2pt}
+\setlist[enumerate]{topsep=4pt,itemsep=2pt}
+
+% Slightly increased line spread for better readability
+\linespread{1.1}
+\setcounter{secnumdepth}{5}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+  \setmainfont[]{Cambria}
+  \setmonofont[]{Consolas}
+  \setmathfont[]{Cambria Math}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\usepackage{setspace}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{longtable,booktabs,array}
+\newcounter{none} % for unnumbered tables
+\usepackage{calc} % for calculating minipage widths
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\pagestyle{fancy}
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\usepackage{indentfirst}
+\usepackage{microtype}
+\usepackage{titlesec}
+\usepackage{fancyhdr}
+\titleformat{\section}[block]{\Large\bfseries}{\thesection.}{0.75em}{}
+\titlespacing*{\section}{0pt}{3ex plus 1ex minus 0.2ex}{1.5ex plus 0.2ex}
+\titleformat{\subsection}[block]{\large\bfseries}{\thesubsection.}{0.75em}{}
+\titlespacing*{\subsection}{0pt}{2.5ex plus 1ex minus 0.2ex}{1.2ex plus 0.2ex}
+\pagestyle{fancy}
+\fancyhf{}
+\cfoot{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\chaptername}{}
+\renewcommand{\chaptertitlename}{}
+\titleformat{\chapter}[block]{\normalfont\huge\bfseries\raggedright}{\thechapter.}{0.5em}{}
+\titlespacing*{\chapter}{0pt}{1.5em}{0.6em}
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Математический анализ},
+  colorlinks=true,
+  linkcolor={black},
+  filecolor={Maroon},
+  citecolor={Blue},
+  urlcolor={black},
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Математический анализ}
+\usepackage{etoolbox}
+\makeatletter
+\providecommand{\subtitle}[1]{% add subtitle to \maketitle
+  \apptocmd{\@title}{\par {\large #1 \par}}{}{}
+}
+\makeatother
+\subtitle{Конспекты семинаров, 4-й семестр}
+\author{}
+\date{}
+
+\begin{document}
+\frontmatter
+\maketitle
+
+\renewcommand*\contentsname{Содержание}
+{
+\setcounter{tocdepth}{3}
+\tableofcontents
+\vspace{-1.25\baselineskip}
+}
+\setstretch{1.3}
+% Avoid blank page: book's \mainmatter uses \cleardoublepage and the first
+% \chapter also \clearpage — that inserts an extra empty sheet after the TOC.
+\makeatletter
+\renewcommand{\mainmatter}{%
+  \@mainmattertrue
+  \pagenumbering{arabic}}%
+\makeatother
+\mainmatter
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\chapter{7-ой МАТ. Семинар
+06.04.2026}\label{ux43eux439-ux43cux430ux442.-ux441ux435ux43cux438ux43dux430ux440-06.04.2026}
+
+\section{Равномерная сходимость
+(продолжение)}\label{ux440ux430ux432ux43dux43eux43cux435ux440ux43dux430ux44f-ux441ux445ux43eux434ux438ux43cux43eux441ux442ux44c-ux43fux440ux43eux434ux43eux43bux436ux435ux43dux438ux435}
+
+\textbf{Определение равномерной сходимости:}
+\[S_n(x) \overset{D}{\rightrightarrows} S(x)\]
+\[\forall \varepsilon > 0 \ \exists N : \forall k \ge N \ \forall x_0 \in D \quad (|S_k(x_0) - S(x_0)| < \varepsilon)\]
+
+Раскроем модуль в неравенстве:
+\[-\varepsilon < S_k(x_0) - S(x_0) < \varepsilon\]
+\[S(x_0) - \varepsilon < S_k(x_0) < S(x_0) + \varepsilon\]
+
+Таким образом, определение можно переписать в следующем виде:
+\[\underbrace{\forall \varepsilon > 0}_{\text{для любой $\varepsilon$-трубки}} \quad \underbrace{\exists N \ \forall k \ge N}_{\text{начиная с некоторого номера}} \quad \forall x_0 \in D \quad \underbrace{\left( S(x_0) - \varepsilon < S_k(x_0) < S(x_0) + \varepsilon \right)}_{(\ast)}\]
+
+\textbf{Геометрический смысл \((\ast)\):} все графики \(y = S_k(x)\)
+лежат в \(\varepsilon\)-трубке графика \(y = S(x)\).
+
+\textbf{Что такое \(\varepsilon\)-трубка графика \(y = S(x)\) на
+множестве \(D\)?} Это множество точек плоскости \(Oxy\), которые
+заметаются графиком \(y = S(x)\) (при \(x \in D\)), когда он смещается
+вверх и вниз на \(\varepsilon\). Границы трубки определяются кривыми
+\(y = S(x) + \varepsilon\) и \(y = S(x) - \varepsilon\).
+
+{\def\LTcaptype{none} % do not increment counter
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\linewidth - 0\tabcolsep) * \real{0.0556}}@{}}
+\toprule\noalign{}
+\endhead
+\bottomrule\noalign{}
+\endlastfoot
+\textbf{Из примера прошлого занятия:} Рассмотрим последовательность
+\(S_k(x) = x^k\) на интервале \(x \in [0; 1)\). \emph{(По графику
+видно)}, что при малых \(\varepsilon \in (0; 1)\) вообще все графики
+\(y = S_k(x) = x^k\) выходят за пределы \(\varepsilon\)-трубки графика
+\(y = S(x) \equiv 0\). При этом, если \(\varepsilon \ge 1\), то все
+графики \(y = S_k(x)\) целиком лежат в \(\varepsilon\)-трубке
+\(y = S(x)\). \\
+\textbf{Вывод:} равномерной сходимости нет,
+\(S_k(x) \underset{D}{\not\rightrightarrows} S(x)\). \\
+*** \\
+\#\#\# Пример 2 Дан функциональный ряд, частичная сумма (ч.с.) которого
+равна: \(S_n(x) = \frac{\text{tg} x}{n}\) \\
+\textbf{а) К чему поточечно сходится этот ряд на
+\(D = \left(0; \frac{\pi}{2}\right)\)?} При фиксированном
+\(x \in \left(0; \frac{\pi}{2}\right)\):
+\(\lim_{n \to \infty} \frac{\text{tg} x}{n} = \lim_{n \to \infty} \frac{\text{tg} x}{\infty} = 0 \implies S(x) = 0 \quad \text{при } x \in \left(0; \frac{\pi}{2}\right)\) \\
+\textbf{б) Есть ли равномерная сходимость на
+\(D = \left(0; \frac{\pi}{2}\right)\)?} Так как предельная функция
+\(S(x) = 0\) непрерывная, то, возможно, будет равномерная сходимость.
+Проверим это. Рассмотрим графики первых частичных сумм:
+\(S_1(x) = \text{tg} x\), \(S_2(x) = \frac{\text{tg} x}{2}\) и т.д. При
+приближении \(x \to \frac{\pi}{2}\) графики уходят в бесконечность. \\
+\textbf{Вывод:} Какую бы \(\varepsilon\)-трубку (вокруг \(y=0\)) мы ни
+взяли, все \(S_k(x)\) уйдут за её границы в
+\(\infty \implies S_k(x) \not\rightrightarrows S(x)\) (равномерной
+сходимости нет). \\
+\end{longtable}
+}
+
+\emph{(Примечание: далее разобран фрагмент нахождения \(N(\varepsilon)\)
+для другой функции, судя по виду вычислений, для функции, содержащей
+экспоненту).}
+
+\textbf{3. б)} Графики \(S_n(x)\) располагаются целиком в
+\(\varepsilon\)-трубке (начиная с некоторого номера)
+\(\implies S_k(-1) < \varepsilon\)
+
+\emph{Вычисления:} \[e^{-k+1} < \varepsilon\]
+\[-k + 1 < \ln \varepsilon\] \[k > -\ln \varepsilon + 1\]
+\[k > \ln \frac{1}{\varepsilon} + 1\]
+
+Отсюда берем номер (округляя вверх):
+\[N(\varepsilon) = \left\lceil \ln \frac{1}{\varepsilon} + 1 \right\rceil\]
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+\subsection{Пример 5}\label{ux43fux440ux438ux43cux435ux440-5}
+
+Дана последовательность:
+\[S_k(x) = x^k, \quad D = \left[0; \frac{1}{2}\right]\]
+
+\textbf{а) Найти поточечную сходимость \(S_k(x) \xrightarrow{D} S(x)\)}
+При \(x \in \left[0; \frac{1}{2}\right]\):
+\[\lim_{k \to \infty} S_k(x) = \lim_{k \to \infty} x^k = 0 \quad (\text{т.к. } 0 \le x < 1)\]
+\(\implies S(x) = 0\) при \(x \in \left[0; \frac{1}{2}\right]\).
+
+\textbf{б) Исследовать на равномерную сходимость
+\(S_k(x) \overset{D}{\rightrightarrows} S(x)\)} Да, равномерная
+сходимость есть, т.к. \(\forall \varepsilon > 0\) график \(y = S_k(x)\)
+будет целиком лежать в \(\varepsilon\)-трубке графика
+\(y = S(x) \equiv 0\). Наибольшее значение на отрезке функция принимает
+в правой точке: \[S_k\left(\frac{1}{2}\right) < \varepsilon\]
+\[\Updownarrow\] \[\frac{1}{2^k} < \varepsilon\]
+\[\frac{1}{\varepsilon} < 2^k\] \[k > \log_2 \frac{1}{\varepsilon}\]
+
+\emph{(Пометка: просто взять
+\(N(\varepsilon) = \left\lceil \log_2 \frac{1}{\varepsilon} \right\rceil\)
+нельзя, т.к. при больших \(\varepsilon\) может получиться отрицательное
+число).}
+
+\textbf{в) Найти \(N(\varepsilon)\)} Для корректного задания номера
+распишем его кусочно: * Если \(\varepsilon > \frac{1}{2}\), то берем
+\(N(\varepsilon) = 1\) * Если \(\varepsilon \le \frac{1}{2}\), то берем
+\(N(\varepsilon) = \lceil \log_2 \frac{1}{\varepsilon} \rceil + 10\)
+\emph{(с запасом)}
+
+Итак, искомый номер \(N(\varepsilon)\) задается системой:
+
+\(N(\varepsilon) = 1\), если \(\varepsilon > \frac{1}{2}\)
+\(N(\varepsilon) = \lceil \log_2 \frac{1}{\varepsilon} \rceil + 10\),
+если \(\varepsilon \le \frac{1}{2}\)
+
+\emph{(Скобки \(\lceil ... \rceil\) означают округление до целого числа
+вверх).}
+
+\backmatter
+\end{document}

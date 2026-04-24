@@ -13,17 +13,18 @@ $$-\varepsilon < S_k(x_0) - S(x_0) < \varepsilon$$
 $$S(x_0) - \varepsilon < S_k(x_0) < S(x_0) + \varepsilon$$
 
 Таким образом, определение можно переписать в следующем виде:
-$$\underbrace{\forall \varepsilon > 0}_{\text{какую бы $\varepsilon$-труб. вокруг гр. } y=S(x) \text{ мы ни взяли}} \quad \underbrace{\exists N \ \forall k \ge N}_{\text{начиная с некоторого номера}} \quad \forall x_0 \in D \quad \underbrace{\left( S(x_0) - \varepsilon < S_k(x_0) < S(x_0) + \varepsilon \right)}_{(\ast)}$$
+$$\underbrace{\forall \varepsilon > 0}_{\text{для любой $\varepsilon$-трубки}} \quad \underbrace{\exists N \ \forall k \ge N}_{\text{начиная с некоторого номера}} \quad \forall x_0 \in D \quad \underbrace{\left( S(x_0) - \varepsilon < S_k(x_0) < S(x_0) + \varepsilon \right)}_{(\ast)}$$
 
 **Геометрический смысл $(\ast)$:** все графики $y = S_k(x)$ лежат в $\varepsilon$-трубке графика $y = S(x)$.
 
 **Что такое $\varepsilon$-трубка графика $y = S(x)$ на множестве $D$?**
 Это множество точек плоскости $Oxy$, которые заметаются графиком $y = S(x)$ (при $x \in D$), когда он смещается вверх и вниз на $\varepsilon$. Границы трубки определяются кривыми $y = S(x) + \varepsilon$ и $y = S(x) - \varepsilon$.
 
----
-**Из примера прошлого занятия:**
-Рассмотрим последовательность $S_k(x) = x^k$ на интервале $x \in [0; 1)$.
-*(По графику видно)*, что при малых $\varepsilon \in (0; 1)$ вообще все графики $y = S_k(x) = x^k$ выходят за пределы $\varepsilon$-трубки графика $y = S(x) \equiv 0$.
+***
+
+**Из примера прошлого занятия:**  
+Рассмотрим последовательность $S_k(x) = x^k$ на интервале $x \in [0; 1)$.  
+*(По графику видно)*, что при малых $\varepsilon \in (0; 1)$ вообще все графики $y = S_k(x) = x^k$ выходят за пределы $\varepsilon$-трубки графика $y = S(x) \equiv 0$.  
 При этом, если $\varepsilon \ge 1$, то все графики $y = S_k(x)$ целиком лежат в $\varepsilon$-трубке $y = S(x)$.
 
 **Вывод:** равномерной сходимости нет, $S_k(x) \underset{D}{\not\rightrightarrows} S(x)$.
@@ -44,7 +45,8 @@ $$\lim_{n \to \infty} \frac{\text{tg} x}{n} = \lim_{n \to \infty} \frac{\text{tg
 
 **Вывод:** Какую бы $\varepsilon$-трубку (вокруг $y=0$) мы ни взяли, все $S_k(x)$ уйдут за её границы в $\infty \implies S_k(x) \not\rightrightarrows S(x)$ (равномерной сходимости нет).
 
----
+***
+
 *(Примечание: далее разобран фрагмент нахождения $N(\varepsilon)$ для другой функции, судя по виду вычислений, для функции, содержащей экспоненту).*
 
 **3. б)** Графики $S_n(x)$ располагаются целиком в $\varepsilon$-трубке (начиная с некоторого номера) $\implies S_k(-1) < \varepsilon$
