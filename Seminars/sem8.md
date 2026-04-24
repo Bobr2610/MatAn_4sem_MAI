@@ -27,7 +27,7 @@ $u_n' = \left( x^n e^{-\frac{nx^2}{2}} \right)' = n x^{n-1} \cdot e^{-\frac{nx^2
 $= x^{n-1} e^{-\frac{nx^2}{2}} (n - nx^2) = n x^{n-1} e^{-\frac{nx^2}{2}} (1 - x^2) = 0$  
 $\Rightarrow x^2 = 1 \Rightarrow x = \pm 1$
 
----
+***
 
 *(продолжение Примера 2)*  
 $u_n' = \left( x^n e^{-\frac{nx^2}{2}} \right)' = n x^{n-1} e^{-\frac{nx^2}{2}} + x^n e^{-\frac{nx^2}{2}} \cdot (-nx)$  
@@ -58,4 +58,4 @@ $\Rightarrow c_n = u_n(1) = e^{-\frac{n}{2}}$
 
 Тогда --- // --- *(сходится равномерно на $D$)*
 
----
+***
